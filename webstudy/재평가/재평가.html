@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="login.js"></script>
+    <style>
+        body > #head {
+            font-family: sans-serif;
+            background-color: #D4D4D4;
+        }
+        body > #body {
+            background-color: #F5F6F7;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="head">
+        <a href=" javascript:void(0)"><h1>Welcome<h1></h1></a>
+    </div>
+    <div id="body">
+        <form action="#" method="post" id="login_form">
+            <input type="text" name="user_id" placeholder="ID" id="id2"><br>
+            <input type="password" name="user_pw" placeholder="Password"><br>
+            <button>로그인</button><br>
+            <input type="checkbox" name="login_continue" id="continue">
+            <label for="continue">로그인 유지</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">아이디/비밀번호 찾기</a>
+
+
+        </form>
+    </div>
+</body>
+</html>
