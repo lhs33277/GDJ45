@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- Calculator -->
-	<bean class="com.goodee.ex01.xml06.Calculator" id="calc"/>
+	<bean class="com.goodee.ex01.xml06.Calculator" id="calc" />
 	
 	<!-- BMICalculator -->
 	<bean class="com.goodee.ex01.xml06.BMICalculator" id="bmiCalc">
@@ -21,7 +21,7 @@
 	
 	<!-- GymMember -->
 	<bean class="com.goodee.ex01.xml06.GymMember" id="gymMember">
-		<property name="name" value="이형식"></property>
+		<property name="name" value="홍길동" />
 		<property name="course">
 			<set>
 				<value>헬스</value>
@@ -29,9 +29,9 @@
 				<value>필라테스</value>
 			</set>
 		</property>
-		<property name="height" value="180.5"/>
-		<property name="weight" value="80.5"/>
-		<property name="bmiCalculator" ref="bmiCalc"></property>
+		<property name="height" value="180.5" />
+		<property name="weight" value="80.5" />
+		<property name="bmiCalculator" ref="bmiCalc" />
 	</bean>
 
 </beans>

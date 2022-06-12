@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -20,10 +19,10 @@ import com.goodee.ex07.service.BoardService;
 
 @Controller
 public class BoardController {
-	
-	// 컨트롤러에서
-	// HttpServletRequest, HttpServletResponse, HttpSession을 선언할 수 있다. (최초 선언한 곳)
 
+	// 컨트롤러에서
+	// HttpServeletRequest, HttpServletResponse, HttpSession 을 선언할 수 있습니다.
+	
 	// logger
 	// System.out.println() 대체
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
@@ -58,7 +57,7 @@ public class BoardController {
 	
 	@GetMapping("/board/addPage")
 	public String addPage() {
-		return "board/add";		// board/add.jsp로 이동
+		return "board/add";  // board/add.jsp로 이동
 	}
 	
 	@PostMapping("/board/add")
@@ -72,16 +71,19 @@ public class BoardController {
 	
 	@GetMapping("/board/remove")
 	// @RequestParam(value="board_no", required=false, defaultValue="0")
-	// 파라미터 board_no가 오지 않는다면 0을 사용한다.
+	// 파라미터 board_no가 오지 않는다면 0을 사용하겠습니다.
 	public void remove(@RequestParam(value="board_no", required=false, defaultValue="0") Long board_no, HttpServletRequest request, HttpServletResponse response) {
-		logger.info("remove() : " + board_no);
+		logger.info("remove(): " + board_no);
 		boardService.remove(board_no, request, response);
-		// save() 메소드와 마찬가지로 remove 메소드에서 직접 이동한다.
+		// save() 메소드와 마찬가지로 remove() 메소드에서 직접 이동한다.
 	}
 	
-	@PostMapping("/board/modifyPage")
-	public String modifyPage(@ModelAttribute(value="board") BoardDTO board) {
-		logger.info("modifyPage(): " + board);
+	// 수정할 게시글 번호를 받아와서
+	// 해당 게시글 정보를 DB에서 가져온 뒤 수정 화면으로 넘겨준다.
+	@GetMapping("/board/modifyPage")
+	public String modifyPage(@RequestParam(value="board_no", required=false, defaultValue="0") Long board_no, Model model) {
+		logger.info("modifyPage(): " + board_no);
+		model.addAttribute("board", boardService.findBoardByNo(board_no));
 		return "board/modify";  // board/modify.jsp로 forward
 	}
 	
@@ -91,8 +93,5 @@ public class BoardController {
 		boardService.modify(board, request, response);
 		// save(), remove() 메소드처럼 modify() 메소드에서 직접 이동한다.
 	}
-	
-	
-	
 	
 }

@@ -6,11 +6,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@ToString
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class BoardDTO {
 	private Long board_no;
 	private String title;
@@ -18,5 +18,4 @@ public class BoardDTO {
 	private String writer;
 	private String created;
 	private String lastModified;
-
 }

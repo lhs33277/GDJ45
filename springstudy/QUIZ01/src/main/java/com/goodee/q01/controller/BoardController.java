@@ -2,6 +2,8 @@ package com.goodee.q01.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +41,8 @@ public class BoardController {
 	
 	@GetMapping("/board/detail")
 	public String detail(@RequestParam(value="no") Long no, Model model) {
-		boardService.increaseHit(no);	// 조회수 증가
-		BoardDTO board = boardService.findBoardByNo(no);	// 증가된 조회수로 검색
+		boardService.increseHit(no);  // 조회수 증가
+		BoardDTO board = boardService.findBoardByNo(no);  // 증가된 조회수로 가져올 수 있음
 		logger.info("detail(): " + board);
 		model.addAttribute("board", board);
 		return "board/detail";
@@ -52,7 +54,8 @@ public class BoardController {
 	}
 	
 	@PostMapping("/board/save")
-	public String save(BoardDTO board) {
+	public String save(BoardDTO board, HttpServletRequest request) {
+		board.setIp(request.getRemoteAddr());  // board에 IP 넣기
 		logger.info("save(): " + board);
 		boardService.save(board);
 		return "redirect:/board/list";

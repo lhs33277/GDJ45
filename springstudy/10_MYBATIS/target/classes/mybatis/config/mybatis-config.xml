@@ -15,6 +15,4 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.goodee.ex10.domain.NoticeDTO" alias="NoticeDTO" />
 	</typeAliases>
 	
-	<!-- 마이바티스 홈페이지에 있는 옵션들. -->
-	
 </configuration>

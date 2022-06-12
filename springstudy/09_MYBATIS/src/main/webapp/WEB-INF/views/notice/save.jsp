@@ -13,12 +13,18 @@
 <body>
 
 	<form action="${contextPath}/notice/save" method="post">
-		
-		<input type="text" name="title" id="title" placeholder="제목" required><br>		<!-- required : 필수 -->
-		<textarea rows="5" cols="30" name="content" id="content" ></textarea><br><br>
+	
+		<input type="text" name="title" id="title" placeholder="제목" required><br>
+		<textarea rows="5" cols="30" name="content" id="content"></textarea><br><br>
 		
 		<button>등록</button>
+	
 	</form>
+	
+	
+	
+	
+	
 
 </body>
 </html>

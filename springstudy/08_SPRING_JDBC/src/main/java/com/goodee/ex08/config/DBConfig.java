@@ -14,9 +14,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class DBConfig {
 
 	// Spring JDBC
-	// 1. DataSorce를 bean으로 등록한다.
+	// 1. DataSource를 bean으로 등록한다.
 	// 2. JdbcTemplate을 bean으로 등록한다.
-	//    이 때, DataSorce bean이 JdbcTemplate bean의 field로 사용된다. (재료로 사용된다.)
+	//    이 때, DataSource bean이 JdbcTemplate bean의 field로 사용된다.
 	
 	@Bean
 	public DriverManagerDataSource dataSource() {
@@ -30,14 +30,16 @@ public class DBConfig {
 	
 	@Bean
 	public JdbcTemplate jdbcTemplate() {
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource());	// 위에건 재료용, 이걸 가져다 씀. jdbc라고 써있지만 내부동작은 dbcp
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource());
 		return jdbcTemplate;
 	}
 	
 	// Spring JDBC의 Transaction 처리
 	// TransactionManager를 bean으로 등록한다.
+	
 	@Bean
 	public TransactionManager transactionManager() {
 		return new DataSourceTransactionManager(dataSource());
 	}
+
 }

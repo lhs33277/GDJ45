@@ -13,34 +13,19 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
-<<<<<<< HEAD
-			<attribute name="test" value="true"/>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-=======
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
 		<attributes>
-<<<<<<< HEAD
-			<attribute name="test" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-=======
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
 		<attributes>
-<<<<<<< HEAD
-			<attribute name="module" value="true"/>
-=======
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -50,10 +35,5 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-<<<<<<< HEAD
-	<classpathentry kind="lib" path="C:/GDJ45/installer/jar/taglibs-standard-impl-1.2.5.jar"/>
-	<classpathentry kind="lib" path="C:/GDJ45/installer/jar/taglibs-standard-spec-1.2.5.jar"/>
-=======
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

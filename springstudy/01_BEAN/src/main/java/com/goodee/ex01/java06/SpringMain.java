@@ -8,7 +8,7 @@ public class SpringMain {
 	public static void main(String[] args) {
 		
 		AbstractApplicationContext ctx = new AnnotationConfigApplicationContext(SpringBeanConfig.class);
-
+		
 		Customer c1 = (Customer)ctx.getBean("customer1");
 		c1.info();
 		
@@ -16,6 +16,7 @@ public class SpringMain {
 		c2.info();
 		
 		ctx.close();
+
 	}
 
 }

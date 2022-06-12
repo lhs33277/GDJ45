@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+
 	<h1>이름 : ${member.name}</h1>
 	<h1>나이 : ${member.age}살</h1>
 

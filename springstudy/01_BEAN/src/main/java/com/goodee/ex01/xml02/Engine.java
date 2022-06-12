@@ -3,11 +3,11 @@ package com.goodee.ex01.xml02;
 public class Engine {
 	
 	// field
-	private String fuel;		// 연료(디젤)
-	private double efficency;	// 연비(10.5)
-	private int hp;				// 출력(340)
-	private int cc;				// 배기량(2993)
-	
+	private String fuel;       // 연료(디젤)
+	private double efficency;  // 연비(10.5)
+	private int hp;            // 출력(340)
+	private int cc;            // 배기량(2993)
+
 	// getter/setter
 	public String getFuel() {
 		return fuel;
@@ -42,6 +42,4 @@ public class Engine {
 		System.out.println("배기량: " + cc + "cc");
 	}
 	
-	
-
 }

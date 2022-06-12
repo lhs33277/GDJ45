@@ -26,13 +26,12 @@ public class BoardServiceImpl implements BoardService {
 	public BoardDTO findBoardByNo(Long no) {
 		return boardRepository.selectBoardByNo(no);
 	}
-	
-	@Override
-	public void increaseHit(Long no) {
-		boardRepository.updateHit(no);
-		
-	}
 
+	@Override
+	public void increseHit(Long no) {
+		boardRepository.updateHit(no);
+	}
+	
 	@Override
 	public int save(BoardDTO board) {
 		return boardRepository.insertBoard(board);

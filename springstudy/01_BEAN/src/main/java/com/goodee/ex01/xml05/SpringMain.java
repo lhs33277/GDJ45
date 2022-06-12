@@ -15,15 +15,14 @@ public class SpringMain {
 		// getter를 이용한 데이터 점검
 		System.out.println("name : " + student.getName());
 		System.out.println("scores : " + student.getExam().getScores().toString());
-		System.out.println("average " + student.getExam().getAverage());
+		System.out.println("average : " + student.getExam().getAverage());
 		System.out.println("grade : " + student.getExam().getGrade());
 		for(Map.Entry<String, String> entry : student.getPInfo().entrySet()) {
 			System.out.println("pInfo's " + entry.getKey() + " : " + entry.getValue());
 		}
 		
-		
 		ctx.close();
-
+		
 	}
 
 }

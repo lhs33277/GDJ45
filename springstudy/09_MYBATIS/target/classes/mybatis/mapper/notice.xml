@@ -8,20 +8,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="mybatis.mapper.notice">
 
 	<!-- 목록 -->
-	<select id="selectNoticeList" resultType="NoticeDTO">   <!-- 타입 이렇게 줄이기로 mybatis config에서 세팅 했다. -->
+	<select id="selectNoticeList" resultType="NoticeDTO">
 		SELECT NOTICE_NO, TITLE, CONTENT, HIT, CREATED, LASTMODIFIED
 		  FROM NOTICE
 		 ORDER BY NOTICE_NO DESC
 	</select>
 	
 	<!-- 등록 -->
-	<insert id="insertNotice" parameterType="NoticeDTO" >	<!-- resultType="int" 적지 않는다. 마이바티스의 문법. -->
-															<!-- ${}는 10처럼 그냥 값이 나오고, #{}는 '공지'처럼 ''가 붙어나옴. -->
-															<!-- 그래도 db에 TO_NUMBER이 자동으로 숫자로 변경해주기 때문에 #{}으로 통일. -->
+	<insert id="insertNotice" parameterType="NoticeDTO">
 		INSERT INTO NOTICE
 			(NOTICE_NO, TITLE, CONTENT, HIT, CREATED, LASTMODIFIED)
 		VALUES
-			(NOTICE_SEQ.NEXTVAL, #{title}, #{content}, 0, SYSTIMESTAMP, SYSTIMESTAMP)	<!-- form태그에서 파라미터를 title content만 보냈다. -->
+			(NOTICE_SEQ.NEXTVAL, #{title}, #{content}, 0, SYSTIMESTAMP, SYSTIMESTAMP)
 	</insert>
 	
 	<!-- 상세보기 -->
@@ -40,11 +38,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 수정 -->
 	<update id="updateNotice" parameterType="NoticeDTO">
-		UPDATE NOTICE
-		   SET TITLE = #{title}
+		UPDATE
+		       NOTICE
+		   SET
+		       TITLE = #{title}
 		     , CONTENT = #{content}
 		     , LASTMODIFIED = SYSTIMESTAMP
-		 WHERE NOTICE_NO = #{noticeNo}
+		 WHERE
+		   	   NOTICE_NO = #{noticeNo}
 	</update>
 	
 	<!-- 삭제 -->
@@ -54,18 +55,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		 WHERE NOTICE_NO = #{noticeNo}
 	</delete>
 	
-	<!-- 다중삭제 -->
-	<!-- DELETE FROM NOTICE WHERE NOTICE_NO IN(1, 4) -->
-	<delete id="deleteNoticeList" parameterType="List">
+	<!-- 다중 삭제 -->
+	<!-- DELETE FROM NOTICE WHERE NOTICE_NO IN(1,4) -->
+	<delete id="deleteNoticeList">
 		DELETE
 		  FROM NOTICE
-		 <where>
+		<where> 
 		 	<foreach collection="list" item="noticeNo" open="NOTICE_NO IN(" separator="," close=")">
-		 		#{noticeNo}
-		 	</foreach>
-		 </where>
+				#{noticeNo}
+			</foreach>
+		</where>
 	</delete>
-	
-	
 
 </mapper>

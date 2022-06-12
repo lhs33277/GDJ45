@@ -13,7 +13,7 @@ public class OpenApiServiceImpl implements OpenApiService {
 	public String dailyBoxOffice(String targetDt) {
 		
 		// key
-		String key = "6647b72e5af7b86e2ef54a84f4bd3ddf";
+		String key = "ae190d2eda0a6312d29a31567cba8aa4";
 		
 		// API URL with Parameter
 		String apiURL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";

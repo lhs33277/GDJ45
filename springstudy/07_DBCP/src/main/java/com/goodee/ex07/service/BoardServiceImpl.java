@@ -17,6 +17,7 @@ public class BoardServiceImpl implements BoardService {
 	// 서비스는 사용자의 요청을 데이터베이스로 전달하고,
 	// 데이터베이스 처리 결과를 사용자에게 응답한다.
 	
+	
 	// 서비스는 BoardConfig.java에서 BoardRepository bean을 가져와야 한다.(DI)
 	@Autowired
 	private BoardRepository boardRepository;
@@ -37,19 +38,20 @@ public class BoardServiceImpl implements BoardService {
 		int res = boardRepository.insertBoard(board);
 		try {
 			response.setContentType("text/html; charset=UTF-8");
-			PrintWriter out =  response.getWriter();
+			PrintWriter out = response.getWriter();
 			if(res > 0) {
 				out.println("<script>");
 				out.println("alert('등록되었습니다.')");
-				out.println("location.href='" + request.getContextPath() + "/board/list'");	// location 이동은 redirect와 같은 방식의 이동이다.
+				out.println("location.href='" + request.getContextPath() + "/board/list'");  // location 이동은 redirect와 같은 방식의 이동이다.
 				out.println("</script>");
+				out.close();
 			} else {
 				out.println("<script>");
 				out.println("alert('등록되지 않았습니다.')");
-				out.println("history.back()");	// location 이동은 redirect와 같은 방식의 이동이다.
+				out.println("history.back()");
 				out.println("</script>");
+				out.close();
 			}
-			out.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -82,27 +84,24 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public void remove(Long board_no, HttpServletRequest request, HttpServletResponse response) {
 		int res = boardRepository.deleteBoard(board_no);
-		if(res > 0) {
-			try {
-				response.setContentType("text/html; charset=UTF-8");
-				PrintWriter out =  response.getWriter();
-				if(res > 0) {
-					out.println("<script>");
-					out.println("alert('삭제되었습니다.')");
-					out.println("location.href='" + request.getContextPath() + "/board/list'");	// location 이동은 redirect와 같은 방식의 이동이다.
-					out.println("</script>");
-				} else {
-					out.println("<script>");
-					out.println("alert('삭제되지 않았습니다.')");
-					out.println("history.back()");	// location 이동은 redirect와 같은 방식의 이동이다.
-					out.println("</script>");
-				}
+		try {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			if(res > 0) {
+				out.println("<script>");
+				out.println("alert('삭제되었습니다.')");
+				out.println("location.href='" + request.getContextPath() + "/board/list'");  // location 이동은 redirect와 같은 방식의 이동이다.
+				out.println("</script>");
 				out.close();
-			} catch (Exception e) {
-				e.printStackTrace();
+			} else {
+				out.println("<script>");
+				out.println("alert('삭제되지 않았습니다.')");
+				out.println("history.back()");
+				out.println("</script>");
+				out.close();
 			}
-		} else {
-			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 

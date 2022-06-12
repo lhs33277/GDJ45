@@ -9,7 +9,7 @@ import com.goodee.ex08.service.BookServiceImpl;
 
 @Configuration
 public class BookConfig {
-	
+
 	@Bean
 	public BookService bookService() {
 		return new BookServiceImpl();
@@ -19,5 +19,5 @@ public class BookConfig {
 	public BookRepository bookRepository() {
 		return new BookRepository();
 	}
-
+	
 }

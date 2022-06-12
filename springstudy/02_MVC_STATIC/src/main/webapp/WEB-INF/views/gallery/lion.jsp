@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<img src="assets/images/lion.jpg" alt="사자">
+
+	<img src="assets/images/lion.jpg">
+	<img src="${contextPath}/assets/images/lion.jpg">
+
 </body>
 </html>

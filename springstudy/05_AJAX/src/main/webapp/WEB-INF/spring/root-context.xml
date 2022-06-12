@@ -6,10 +6,18 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
 	<!-- MemberServiceImpl -->
-	<bean class="com.goodee.ex05.service.MemberServiceImpl" id="memberService" />	<!-- impl에 필드도 뭣도 없어서 property 없이 나홀로 태그로 마무리 -->
-	<bean class="com.goodee.ex05.service.BoardServiceImpl"	id="boardService" />
+	<bean class="com.goodee.ex05.service.MemberServiceImpl" id="memberService" />
+	
+	<!-- BoardServiceImpl -->
+	<bean class="com.goodee.ex05.service.BoardServiceImpl" id="boardService" />
+	
+	<!-- ProductServiceImpl -->
 	<bean class="com.goodee.ex05.service.ProductServiceImpl" id="productService" />
+	
+	<!-- ReservationServiceImpl -->
 	<bean class="com.goodee.ex05.service.ReservationServiceImpl" id="reservationService" />
+	
+	<!-- OpenApiServiceImpl -->
 	<bean class="com.goodee.ex05.service.OpenApiServiceImpl" id="openApiService" />
-		
+	
 </beans>

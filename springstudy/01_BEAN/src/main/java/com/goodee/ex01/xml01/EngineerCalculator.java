@@ -13,7 +13,7 @@ public class EngineerCalculator {
 		
 	}
 	
-	// constructor using field
+	// constructor using fields
 	public EngineerCalculator(int a, int b, Calculator calculator) {
 		super();
 		this.a = a;
@@ -38,32 +38,25 @@ public class EngineerCalculator {
 	public void mod() {
 		calculator.mod(a, b);
 	}
-	
+
 	// getter/setter
 	public int getA() {
 		return a;
 	}
-
 	public void setA(int a) {
 		this.a = a;
 	}
-
 	public int getB() {
 		return b;
 	}
-
 	public void setB(int b) {
 		this.b = b;
 	}
-
 	public Calculator getCalculator() {
 		return calculator;
 	}
-
 	public void setCalculator(Calculator calculator) {
 		this.calculator = calculator;
 	}
-	
-	
-	
+
 }

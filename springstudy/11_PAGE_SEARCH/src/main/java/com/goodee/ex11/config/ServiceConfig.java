@@ -8,9 +8,10 @@ import com.goodee.ex11.service.EmployeeServiceImpl;
 
 @Configuration
 public class ServiceConfig {
-	
+
 	@Bean
 	public EmployeeService employeeService() {
 		return new EmployeeServiceImpl();
 	}
+	
 }

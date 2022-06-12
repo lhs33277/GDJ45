@@ -42,11 +42,8 @@ public class EmployeeController {
 	
 	@ResponseBody
 	@GetMapping(value="/employee/autoComplete", produces="application/json")
-	public Map<String, Object> autoComplete(HttpServletRequest request) {
+	public Map<String, Object> autoComplete(HttpServletRequest request){
 		return employeeService.autoComplete(request);
 	}
-	
-	
-	
 	
 }

@@ -123,7 +123,7 @@ public class BookController {
 	@GetMapping("/book/transaction/test")
 	public String transaction() {
 		bookService.transaction();
-		return "redirect:book/list";
+		return "redirect:/book/list";
 	}
 	
 }

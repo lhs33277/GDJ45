@@ -14,5 +14,4 @@ public class NoticeConfig {
 		return new NoticeServiceImpl();
 	}
 	
-	
 }

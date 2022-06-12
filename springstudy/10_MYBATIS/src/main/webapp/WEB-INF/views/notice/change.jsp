@@ -13,13 +13,14 @@
 <body>
 
 	<form action="${contextPath}/notice/change" method="post">
-		
-		<input type="text" name="title" id="title" value="${notice.title}" required><br>		<!-- required : 필수 -->
-		<textarea rows="5" cols="30" name="content" id="content" >${notice.content}</textarea><br><br>	<!-- textarea는 value="" 속성추가가 아니고 태그 사이에 넣는다. -->
+	
+		<input type="text" name="title" id="title" value="${notice.title}" required><br>
+		<textarea rows="5" cols="30" name="content" id="content">${notice.content}</textarea><br><br>
 		<input type="hidden" name="noticeNo" value="${notice.noticeNo}">
 		
 		<button>수정완료</button>
+	
 	</form>
-
+	
 </body>
 </html>

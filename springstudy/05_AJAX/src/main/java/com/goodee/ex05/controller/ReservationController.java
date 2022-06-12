@@ -41,6 +41,4 @@ public class ReservationController {
 		return reservationService.image();
 	}
 	
-
-	
 }

@@ -7,8 +7,11 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.goodee.ex06.domain.BoardDTO;
 
+@Repository
 public class BoardRepository {
 
 	// BoardRepository == BoardDAO
@@ -31,14 +34,14 @@ public class BoardRepository {
 	
 	
 	public Connection getConnection() {
-		Connection con = null;
+		Connection conn = null;
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "1111");
-		} catch(Exception e) {
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "1111");
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return con;
+		return conn;
 	}
 	
 	public void close(Connection con, PreparedStatement ps, ResultSet rs) {
@@ -128,7 +131,7 @@ public class BoardRepository {
 		int res = 0;
 		try {
 			con = getConnection();
-			sql = "UPDATE BOARD SET TITLE = ?, CONTENT = ? WHERE BOARD_NO = ?";
+			sql = "UPDATE BOARD SET TITLE = ?, CONTENT = ? LASTMODIFIED = TO_CHAR(SYSDATE, 'YYYY-MM-DD') WHERE BOARD_NO = ?";
 			ps = con.prepareStatement(sql);
 			ps.setString(1, board.getTitle());
 			ps.setString(2, board.getContent());

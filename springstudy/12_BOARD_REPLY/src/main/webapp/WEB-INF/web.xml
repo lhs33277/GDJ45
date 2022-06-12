@@ -3,11 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
-<<<<<<< HEAD
   	<!-- Encoding -->
-=======
-	<!-- Encoding -->
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -24,11 +20,7 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>

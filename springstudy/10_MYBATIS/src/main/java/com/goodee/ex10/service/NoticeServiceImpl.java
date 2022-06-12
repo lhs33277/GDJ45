@@ -23,19 +23,18 @@ public class NoticeServiceImpl implements NoticeService {
 	}
 
 	@Override
-	public NoticeDTO findNoticeByNo(HttpServletRequest request) {		// 조회수증가 메소드를 만들지 않고 상세보기에서 같이 작업.
-		System.out.println("requestURI : " + request.getRequestURI());	// "/ex09/notice/detail"
+	public NoticeDTO findNoticeByNo(HttpServletRequest request) {
+
+		String requestURI = request.getRequestURI();  // "/ex09/notice/detail"
+		String[] arr = requestURI.split("/");         // { "", "ex09", "notice", "detail"}
 		
-		String requestURI = request.getRequestURI();
-		String[] arr = requestURI.split("/");		  // {"", "ex09", "notice", "detail"}
-				
 		Long noticeNo = Long.parseLong(request.getParameter("noticeNo"));
 		
-		if(arr[arr.length - 1].equals("detail")) {			// 상세보기 요청이면,
-			noticeMapper.updateHit(noticeNo);			// 조회수를 늘리고,
+		if(arr[arr.length - 1].equals("detail")) {            // 상세보기 요청이면,
+			noticeMapper.updateHit(noticeNo);             // 조회수를 늘리고,
 		}
-						// 조회수를 늘리고,
-		return noticeMapper.selectNoticeByNo(noticeNo);	// 상세보기를 조회한다.
+		return noticeMapper.selectNoticeByNo(noticeNo);   // 정보를 조회한다.
+		
 	}
 
 	@Override
@@ -74,23 +73,23 @@ public class NoticeServiceImpl implements NoticeService {
 		}
 		return (res == noticeNoList.length) ? 1 : 0;  // 모두 삭제했다면 1 반환 아니면 0 반환
 	}
-	
+
 	@Override
 	public int removeList2(HttpServletRequest request) {
 		// 한 번에 여러 개 지우기
 		// DELETE FROM NOTICE WHERE NOTICE_NO IN(1, 4)
 		String[] noticeNoList = request.getParameterValues("noticeNoList");  // {"1", "4"}
-		List<Long> list = new ArrayList<Long>();
+		List<Long> list = new ArrayList<>();
 		for(int i = 0; i < noticeNoList.length; i++) {
 			list.add(Long.parseLong(noticeNoList[i]));  // list.add(1) -> list.add(4)
 		}
 		return noticeMapper.deleteNoticeList(list);
 	}
-
+	
 	@Override
 	public void transactionTest() {
-		noticeMapper.insertNotice(new NoticeDTO(null, "테스트", "테스트", null, null, null));
+		noticeMapper.insertNotice(new NoticeDTO(null, "테스트제목", "테스트내용", null, null, null));
 		noticeMapper.insertNotice(new NoticeDTO());
-		
 	}
+	
 }

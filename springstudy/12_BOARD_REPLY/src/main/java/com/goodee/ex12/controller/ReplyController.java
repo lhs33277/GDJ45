@@ -1,6 +1,5 @@
 package com.goodee.ex12.controller;
 
-<<<<<<< HEAD
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,14 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.goodee.ex12.service.ReplyService;
-=======
-import org.springframework.stereotype.Controller;
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 
 @Controller
 public class ReplyController {
 
-<<<<<<< HEAD
 	@Autowired
 	private ReplyService replyService;
 	
@@ -41,7 +36,5 @@ public class ReplyController {
 	public Map<String, Object> remove(@RequestParam Long replyNo) {
 		return replyService.removeReply(replyNo);
 	}
-=======
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 	
 }

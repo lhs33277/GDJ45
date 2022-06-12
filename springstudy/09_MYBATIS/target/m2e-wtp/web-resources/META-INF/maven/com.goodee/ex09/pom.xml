@@ -7,14 +7,13 @@
 	<name>09_MYBATIS</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
+
 	<properties>
 		<java-version>11</java-version>
 		<org.springframework-version>5.3.3</org.springframework-version>
 		<org.aspectj-version>1.9.6</org.aspectj-version>
 		<org.slf4j-version>1.7.30</org.slf4j-version>
 	</properties>
-	
-
 	
 	<dependencies>
 	
@@ -31,14 +30,13 @@
 		    <artifactId>mybatis-spring</artifactId>
 		    <version>2.0.6</version>
 		</dependency>
-		
+	
 		<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
 		<dependency>
 		    <groupId>com.zaxxer</groupId>
 		    <artifactId>HikariCP</artifactId>
 		    <version>3.4.5</version>
 		</dependency>
-		
 	
 		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
 		<dependency>
@@ -47,7 +45,7 @@
 		    <version>${org.aspectj-version}</version>
 		    <scope>runtime</scope>
 		</dependency>
-		
+	
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 		    <groupId>org.projectlombok</groupId>
@@ -63,7 +61,6 @@
 		    <version>${org.springframework-version}</version>
 		    <scope>test</scope>
 		</dependency>
-		
 	
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 		<dependency>
@@ -71,8 +68,6 @@
 		    <artifactId>spring-jdbc</artifactId>
 		    <version>${org.springframework-version}</version>
 		</dependency>
-	
-	
 	
 		<!-- Spring -->
 		<dependency>
@@ -98,8 +93,7 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
-		</dependency>	
-		
+		</dependency>
 		
 		<!-- Logging -->
 		<dependency>

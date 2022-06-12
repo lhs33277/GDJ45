@@ -5,8 +5,8 @@ import java.util.Set;
 public class GymMember {
 
 	// field
-	private String name;				  // 이름
-	private Set<String> course;			  // 등록과정(헬스, 스피닝, 필라테스 등)
+	private String name;         // 이름
+	private Set<String> course;  // 등록과정(헬스, 스피닝, 필라테스 등)
 	private double height;
 	private double weight;
 	private BMICalculator bmiCalculator;
@@ -48,4 +48,5 @@ public class GymMember {
 		System.out.println("course : " + course.toString());
 		bmiCalculator.info();
 	}
+	
 }

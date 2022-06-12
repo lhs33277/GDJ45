@@ -17,7 +17,7 @@ import org.springframework.transaction.interceptor.RuleBasedTransactionAttribute
 import org.springframework.transaction.interceptor.TransactionInterceptor;
 
 @Aspect  // 안녕. 난 Aspect야. 공통 모듈(공통으로 해야 할 일)을 담당하고 있어.
-@EnableAspectJAutoProxy  // Aspect의 동작이 자동으로 진행돼요.
+@EnableAspectJAutoProxy  // Aspect의 동작이 자동으로 진행되요.
 
 @Configuration
 public class TransactionConfig {
@@ -45,7 +45,7 @@ public class TransactionConfig {
 	public Advisor advisor() {
 		
 		AspectJExpressionPointcut pointCut = new AspectJExpressionPointcut();
-		pointCut.setExpression("execution(* com.goodee.ex09.service.*Impl.*(..))");
+		pointCut.setExpression("execution(* com.goodee.ex10.service.*Impl.*(..))");
 		
 		return new DefaultPointcutAdvisor(pointCut, interceptor());
 		

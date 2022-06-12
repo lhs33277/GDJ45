@@ -8,22 +8,22 @@
 		<property name="scores">
 			<list>
 				<value>10</value>
-				<value>100</value>
-				<value>20</value>
-				<value>100</value>
+				<value>50</value>
+				<value>90</value>
 				<value>30</value>
+				<value>70</value>
 			</list>
 		</property>
 	</bean>
 	
 	<!-- Student -->
 	<bean class="com.goodee.ex01.xml05.Student" id="stu">
-		<property name="name" value="이형식"></property>
-		<property name="exam" ref="exam"></property>
+		<property name="name" value="홍길동" />
+		<property name="exam" ref="exam" />
 		<property name="pInfo">
 			<map>
-				<entry key="address" value="서울"></entry>
-				<entry key="phone" value="010-1234-1234"></entry>
+				<entry key="address" value="seoul" />
+				<entry key="phone" value="010-4444-5555" />
 			</map>
 		</property>
 	</bean>

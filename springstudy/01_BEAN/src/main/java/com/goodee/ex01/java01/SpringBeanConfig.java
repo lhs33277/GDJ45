@@ -4,10 +4,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /*
- 	@Configuration
- 	안녕. 난 bean을 만드는 java class 파일이야.
- 	spring bean configuration file과 같은 일을 하지. 
- */
+	@Configuration
+	안녕. 난 bean을 만드는 java class 파일이야.
+	spring bean configuration file과 같은 일을 하지.
+*/
 
 @Configuration
 public class SpringBeanConfig {
@@ -19,40 +19,36 @@ public class SpringBeanConfig {
 	
 	/* Song */
 	
-	// 1. 반환타입 : Song	<bean class="com.goodee....Song">
-	// 2. 메소드명 : mySong <bean id="mySong">
-	
-	@Bean	// 나는 bean을 만듭니다.
+	// 1. 반환타입 : Song    <bean class="Song">
+	// 2. 메소드명 : mySong  <bean id="mySong">
+
+	@Bean  // 나는 bean을 만듭니다.
 	public Song mySong() {
 		
 		// Song 객체를 만들어서 반환하기
-		// setter injection을 하든 constructor injection을 하든 자유
+		// setter injection을 하든 constructor injection을 하든 자유~
 		
 		Song res = new Song();
-		res.setTitle("hello");	// setter injection  <property name="title" value="hello" />
-		res.setGenre("balad");	// setter injection  <property name="genre" value="balad" />
+		res.setTitle("hello");  // setter injection <property name="title" value="hello" />
+		res.setGenre("balad");  // setter injection <property name="genre" value="balad" />
 		
 		return res;
+		
 	}
 	
 	@Bean
-	public Singer mySinger() {	// <bean class="...Singer" id="mySinger">
+	public Singer mySinger() {  // <bean class="Singer" id="mySinger">
 		
 		// Singer 객체를 만들어서 반환하기
-		// setter injection을 하든 constructor injection을 하든 자유
+		// setter injection을 하든 constructor injection을 하든 자유~
 		
-		return new Singer("adele", mySong());	// constructor injection
+		return new Singer("adele", mySong());  // constructor injection
 		
 		// <bean class="Singer" id="mySinger">
 		//   <constructor-arg value="adele" />
-		//	 <constructor arg ref="mySong"  />
+		//   <constructor-arg ref="mySong" />
 		// </bean>
+		
 	}
 
 }
-
-
-
-
-
-

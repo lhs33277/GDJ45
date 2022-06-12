@@ -12,7 +12,7 @@ import com.goodee.ex10.domain.NoticeDTO;
 
 @Mapper
 public interface NoticeMapper {
-	
+
 	// notice.xml에 등록된 쿼리문의 id를 추상메소드로 작성합니다.
 	
 	public List<NoticeDTO> selectNoticeList();
@@ -22,6 +22,5 @@ public interface NoticeMapper {
 	public int updateNotice(NoticeDTO notice);
 	public int deleteNotice(Long noticeNo);
 	public int deleteNoticeList(List<Long> list);
-	
 
 }

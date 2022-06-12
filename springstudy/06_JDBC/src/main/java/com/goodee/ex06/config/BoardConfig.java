@@ -9,7 +9,7 @@ import com.goodee.ex06.service.BoardServiceImpl;
 
 @Configuration
 public class BoardConfig {
-	
+
 	@Bean
 	public BoardService boardService() {
 		return new BoardServiceImpl();
@@ -19,5 +19,5 @@ public class BoardConfig {
 	public BoardRepository boardRepository() {
 		return new BoardRepository();
 	}
-
+	
 }

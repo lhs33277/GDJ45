@@ -3,11 +3,11 @@ package com.goodee.ex01.xml05;
 import java.util.Map;
 
 public class Student {
-	
+
 	// field
 	private String name;
 	private Exam exam;
-	private Map<String, String> pInfo;	// address, phone
+	private Map<String, String> pInfo;  // address, phone
 	
 	// getter/setter
 	public String getName() {
@@ -22,7 +22,7 @@ public class Student {
 	public void setExam(Exam exam) {
 		this.exam = exam;
 	}
-	// 이클립스가 만들어 준 이름 getpInfo(), setpInfo()를 getPInfo(), setPInfo()로 변경해 줘야 <bean>태그가 인식할 수 있다.
+	// 이클립스가 만들어 준 이름 getpInfo(), setpInfo()를 getPInfo(), setPInfo()로 변경해 줘야 <bean> 태그가 인식할 수 있다.
 	public Map<String, String> getPInfo() {
 		return pInfo;
 	}
@@ -30,5 +30,4 @@ public class Student {
 		this.pInfo = pInfo;
 	}
 	
-
 }

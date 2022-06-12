@@ -1,10 +1,10 @@
 package com.goodee.ex01.java01;
 
 public class Song {
-	
+
 	// field
-	private String title;
-	private String genre;
+	private String title;  // 제목
+	private String genre;  // 장르
 	
 	// getter/setter
 	public String getTitle() {
@@ -19,4 +19,5 @@ public class Song {
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
+	
 }

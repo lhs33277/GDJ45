@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-	
-<!-- 외부 css파일 포함하기 -->
+
+<!-- 외부 css 파일 포함하기 -->
 <link rel="stylesheet" href="resources/css/detail.css">
 
 <!-- 외부 js 파일 포함하기 -->
@@ -15,12 +15,15 @@
 <script>
 
 	$(document).ready(function(){
+	
 		$('.picture').on('click', function(){
 			alert('앗 따거');
 		})
+		
 	})
 	
 </script>
+
 </head>
 <body>
 

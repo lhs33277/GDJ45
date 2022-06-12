@@ -1,7 +1,7 @@
 package com.goodee.ex01.java03;
 
 public class Gugudan {
-	
+
 	// field
 	private Calculator calculator;
 	private int begin;
@@ -18,14 +18,12 @@ public class Gugudan {
 	// printGugudan() 메소드 : begin~end 단 출력하기
 	public void printGugudan() {
 		// dan * n = (dan * n)
-		
-		for(int dan = begin; dan <= end; dan++) {
-			for(int n = 1; n <= 9; n++) {
-			System.out.println(dan + "X" + n + "=" + calculator.mul(dan, n) + "\t");
+		for(int n = 1; n <= 9; n++) {
+			for(int dan = begin; dan <= end; dan++) {
+				System.out.print(dan + "*" + n + "=" + calculator.mul(dan, n) + "\t");
 			}
 			System.out.println();
 		}
 	}
-
-
+	
 }

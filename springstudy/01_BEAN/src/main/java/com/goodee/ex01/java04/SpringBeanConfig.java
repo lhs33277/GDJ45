@@ -5,12 +5,12 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SpringBeanConfig {
-	
+
 	@Bean(name="publisher2")
 	public Publisher a() {
 		Publisher publisher = new Publisher();
 		publisher.setName("우리출판사");
-		publisher.setTel("010-1010-1212");
+		publisher.setTel("02-555-7777");
 		return publisher;
 	}
 	
@@ -22,5 +22,5 @@ public class SpringBeanConfig {
 		book.setPublisher(a());
 		return book;
 	}
-
+	
 }

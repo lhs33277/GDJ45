@@ -7,13 +7,18 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class SpringMain {
 
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws Exception {
+		
 		AbstractApplicationContext ctx = new GenericXmlApplicationContext("xml/context03.xml");
 		
-		MyConnection myCon = ctx.getBean("oracleConnection", MyConnection.class);
+		MyConnection myCon = ctx.getBean("oracleConnection2", MyConnection.class);
 		Connection con = myCon.getConnection();
 		
-		con.close();
+		if(con != null) {
+			con.close();
+		}
+		
+		ctx.close();
 
 	}
 

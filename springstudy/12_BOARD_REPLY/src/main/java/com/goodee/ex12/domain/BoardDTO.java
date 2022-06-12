@@ -8,13 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-<<<<<<< HEAD
 @NoArgsConstructor
 @AllArgsConstructor
-=======
-@AllArgsConstructor
-@NoArgsConstructor
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 @Builder
 public class BoardDTO {
 	private Long rn;

@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +11,12 @@
 <title>Insert title here</title>
 <script src="resources/js/jquery-3.6.0.js"></script>
 <script>
-	
+
 	// 페이지 로드 이벤트
 	$(document).ready(function(){
-			$('#btn1').on('click', fnAjax1);
-			$('#btn2').on('click', fnAjax2);
-			$('#btn3').on('click', fnAjax3);
+		$('#btn1').on('click', fnAjax1);
+		$('#btn2').on('click', fnAjax2);
+		$('#btn3').on('click', fnAjax3);
 	})
 	
 	// 함수
@@ -23,25 +25,24 @@
 			url: '${contextPath}/product/list1',
 			type: 'get',
 			dataType: 'json',
-			success: function(products){	// 변수이름 내맘대로(products) -> [{np,name,maker,price}, {}, {}] 대괄호가 list,  중괄호는 dto 또는 map
-				$('#products').empty();		// tbody id
-				$.each(products, function(i, product){	// 인덱스i, 제품하나하나product 임의선정
+			success: function(products){  // products -> [{no,name,maker,price}, {}, {}]
+				$('#products').empty();
+				$.each(products, function(i, product){
 					var tr = '<tr>';
 					tr += '<td>' + product.no + '</td>';
 					tr += '<td>' + product.name + '</td>';
 					tr += '<td>' + product.maker + '</td>';
 					tr += '<td>' + product.price + '</td>';
 					tr += '</tr>';
-					$('#products').append(tr);	// .html()도 가능
+					$('#products').append(tr);
 				})
 			},
-			error: function(jqXHR){	// 변수이름 내맘대로
+			error: function(jqXHR){
 				console.log(jqXHR.status);
 				console.log(jqXHR.responseText);
 			}
 		})
-		
-	}	// fnAjax1
+	}  // fnAjax1
 	
 	function fnAjax2(){
 		$.ajax({
@@ -64,9 +65,8 @@
 				console.log(jqXHR.responseText);
 			}
 		})
-		
-	}	// fnAjax2
-	
+	}  // fnAjax2
+
 	function fnAjax3(){
 		$.ajax({
 			url: '${contextPath}/product/list3',
@@ -89,11 +89,6 @@
 			}
 		})
 	}  // fnAjax3
-		
-	
-		
-	
-	
 	
 </script>
 </head>
@@ -115,7 +110,7 @@
 			</tr>
 		</thead>
 		<tbody id="products">
-		
+			
 		</tbody>
 	</table>
 

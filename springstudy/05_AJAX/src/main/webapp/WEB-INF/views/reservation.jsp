@@ -88,10 +88,6 @@
 				.append($('<li>').text(reservation.name))
 				.appendTo('#result');
 			},
-			/* success: (result)=>{
-				익명함수 같은거임.
-			},
-			*/
 			error: function(jqXHR){
 				if(jqXHR.status == 500){
 					alert('저장할 수 없는 데이터입니다.');
@@ -127,9 +123,3 @@
 
 </body>
 </html>
-
-
-
-
-
-

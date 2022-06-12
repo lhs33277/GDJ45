@@ -14,12 +14,8 @@
 		<org.aspectj-version>1.9.6</org.aspectj-version>
 		<org.slf4j-version>1.7.30</org.slf4j-version>
 	</properties>
-	
 
-	
 	<dependencies>
-	
-
 	
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>

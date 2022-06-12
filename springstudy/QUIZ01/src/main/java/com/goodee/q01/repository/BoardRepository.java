@@ -75,11 +75,11 @@ public class BoardRepository {
 		Long count = 0L;
 		try {
 			con = dataSource.getConnection();
-			sql = "SELECT COUNT(*) FROM BOARD";
+			sql = "SELECT COUNT(*) AS 갯수 FROM BOARD";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 			if(rs.next()) {
-				count = rs.getLong(1);  // rs.getLong("COUNT(*)")
+				count = rs.getLong(1);  // rs.getLong("갯수")
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -123,12 +123,11 @@ public class BoardRepository {
 			ps = con.prepareStatement(sql);
 			ps.setLong(1, no);
 			ps.executeUpdate();
-		} catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-		} finally{
+		} finally {
 			close(con, ps, null);
 		}
-		
 	}
 	
 	public int insertBoard(BoardDTO board) {

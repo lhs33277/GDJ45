@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class MyConnection {
-	
+
 	// field
 	private String driverClassName;
 	private String url;
@@ -37,7 +37,7 @@ public class MyConnection {
 		this.password = password;
 	}
 	
-	// getConnection() 메소드
+	// getConnnection() 메소드
 	public Connection getConnection() {
 		Connection con = null;
 		try {

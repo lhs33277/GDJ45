@@ -26,11 +26,7 @@ public class UserController {
 		Map<String, String> user = new HashMap<>();
 		user.put("id", SecurityUtils.XSS(request.getParameter("id")));
 		user.put("pw", request.getParameter("pw"));
-<<<<<<< HEAD
 		user.put("name", "아무개");
-=======
-		user.put("name", "이형식");
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 		session.setAttribute("user", user);
 		return "index";
 	}
@@ -47,8 +43,4 @@ public class UserController {
 		return "board/list";
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675

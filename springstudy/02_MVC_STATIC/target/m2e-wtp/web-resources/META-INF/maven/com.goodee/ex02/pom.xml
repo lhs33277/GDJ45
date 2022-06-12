@@ -7,13 +7,16 @@
 	<name>02_MVC_STATIC</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
+	
 	<properties>
 		<java-version>11</java-version>
 		<org.springframework-version>5.3.3</org.springframework-version>
 		<org.aspectj-version>1.9.6</org.aspectj-version>
 		<org.slf4j-version>1.7.30</org.slf4j-version>
 	</properties>
+	
 	<dependencies>
+	
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -91,6 +94,7 @@
 		</dependency>
 				
 		<!-- Servlet -->
+
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 		    <groupId>javax.servlet</groupId>
@@ -98,7 +102,7 @@
 		    <version>4.0.1</version>
 		    <scope>provided</scope>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
@@ -112,12 +116,14 @@
 		</dependency>
 	
 		<!-- Test -->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.1</version>
-			<scope>test</scope>
-		</dependency>        
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.13.1</version>
+		    <scope>test</scope>
+		</dependency>
+
 	</dependencies>
     <build>
         <plugins>
@@ -141,7 +147,7 @@
                 <version>2.5.1</version>
                 <configuration>
                     <source>${java-version}</source>
-                    <target>11</target>
+                    <target>${java-version}</target>
                     <compilerArgument>-Xlint:all</compilerArgument>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>

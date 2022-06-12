@@ -16,17 +16,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-
 // @Mapper를 사용하고 있습니다. 여기에서 Mapper를 찾으세요.
 @MapperScan(basePackages= {"com.goodee.ex10.mapper"})
-
 
 // mybatis/properties/db.properties 파일의 내용을 참조하겠습니다.
 @PropertySource(value={"classpath:mybatis/properties/db.properties"})
 
 // TransactionManager를 사용하겠습니다.
 @EnableTransactionManagement
-
 
 @Configuration
 public class DBConfig {

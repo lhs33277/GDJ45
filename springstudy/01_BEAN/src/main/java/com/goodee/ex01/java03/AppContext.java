@@ -5,14 +5,15 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppContext {
-	
-	@Bean(name="calc")	//<bean id="calc">
-	public Calculator aaaz() {
+
+	@Bean(name="calc")     // <bean id="calc">
+	public Calculator aaa() {
 		return new Calculator();
 	}
 	
-	@Bean(name="gugudan")
-	public Gugudan qwqwzz() {
-		return new Gugudan(aaaz(), 3, 5);
+	@Bean(name="gugudan")  // <bean id="gugudan">
+	public Gugudan bbb() {
+		return new Gugudan(aaa(), 3, 5);
 	}
+	
 }

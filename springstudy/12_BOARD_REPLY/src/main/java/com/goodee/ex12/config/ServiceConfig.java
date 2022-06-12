@@ -20,8 +20,5 @@ public class ServiceConfig {
 	public ReplyService replyService() {
 		return new ReplyServiceImpl();
 	}
-<<<<<<< HEAD
 	
-=======
->>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 }

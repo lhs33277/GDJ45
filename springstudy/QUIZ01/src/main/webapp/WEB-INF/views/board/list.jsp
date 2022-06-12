@@ -17,7 +17,7 @@
 </style>
 <script src="../resources/js/jquery-3.6.0.js"></script>
 <script>
-	$(document).ready(()=>{
+	$(document).ready(function(){
 		$('.fa-trash-can').on('click', function(){
 			if(confirm('삭제할까요?')){
 				alert($(this).data('no'));
