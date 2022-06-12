@@ -16,12 +16,20 @@
 	
 		// 수정화면으로 이동
 		$('#btnChangePage').on('click', function(){
+<<<<<<< HEAD
 			location.href='${contextPath}/board/changePage';
+=======
+			location.href='${contextPath}/board/changePage';	// ${contextPath}/board/changePage?boardNo=${board.boardNo} 세션에 올라가 있기 때문에 이렇게 안해도 됨.
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 		})
 		
 		// 삭제
 		$('#btnRemove').on('click', function(){
+<<<<<<< HEAD
 			if(confirm('삭제할까요?')){
+=======
+			if(confirm('삭제할까요?')) {
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 				location.href='${contextPath}/board/remove?boardNo=${board.boardNo}';				
 			}
 		})
@@ -31,6 +39,7 @@
 			location.href='${contextPath}/board/list';
 		})
 		
+<<<<<<< HEAD
 		// 댓글 갯수 + 리스트
 		fnReplies();
 		
@@ -124,6 +133,11 @@
 		cursor: pointer;
 	}
 </style>
+=======
+	})
+	
+</script>
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 </head>
 <body>
 
@@ -146,6 +160,7 @@
 	
 	<hr>
 	
+<<<<<<< HEAD
 	<div>
 		댓글 <span id="replyCount"></span>개
 	</div>
@@ -163,6 +178,15 @@
 	댓글 리스트<br>
 	<table>
 		<tbody id="replies">
+=======
+	댓글 몇 개
+	
+	<textarea rows="3" cols="30" name="content" id="content"></textarea><br><br>
+	
+	댓글 리스트<br>
+	<table>
+		<tbody>
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 			
 		</tbody>
 	</table>

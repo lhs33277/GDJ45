@@ -9,7 +9,13 @@ import com.goodee.ex12.domain.BoardDTO;
 
 public interface BoardService {
 	public void findBoards(HttpServletRequest request, Model model);
+<<<<<<< HEAD
 	public void findBoardByNo(HttpServletRequest request, HttpServletResponse response, Model model);
+=======
+	
+	public void findBoardByNo(HttpServletRequest request, HttpServletResponse response, Model model);
+	
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 	public int save(HttpServletRequest request);
 	public int change(BoardDTO board);
 	public int remove(Long boardNo);

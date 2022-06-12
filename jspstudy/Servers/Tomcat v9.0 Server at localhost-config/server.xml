@@ -60,7 +60,11 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
+<<<<<<< HEAD
     <Connector connectionTimeout="20000" port="9090" protocol="HTTP/1.1" redirectPort="8443"/>
+=======
+    <Connector URIEncoding="UTF-8" connectionTimeout="20000" port="9090" protocol="HTTP/1.1" redirectPort="8443"/>
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -152,7 +156,11 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
+<<<<<<< HEAD
       <Context docBase="01_SERVLET" path="/SERVLET" reloadable="true" source="org.eclipse.jst.jee.server:01_SERVLET"/><Context docBase="06_MYBATIS" path="/MYBATIS" reloadable="true" source="org.eclipse.jst.jee.server:06_MYBATIS"/><Context docBase="03_JSTL" path="/JSTL" reloadable="true" source="org.eclipse.jst.jee.server:03_JSTL"/></Host>
+=======
+      <Context docBase="StaffProject" path="/StaffProject" reloadable="true" source="org.eclipse.jst.jee.server:StaffProject"/></Host>
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
     </Engine>
   </Service>
 </Server>

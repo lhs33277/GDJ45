@@ -13,11 +13,19 @@
 <script type="text/javascript">
 	
 	$(function(){
+<<<<<<< HEAD
 	
 		// 서브밋
 		$('#f').on('submit', function(event){
 			if($('#title').val() == ''){
 				alert("제목은 필수입니다.");
+=======
+		
+		// 서브밋
+		$('#f').on('submit', function(event){
+			if($('#title').val() == '') {
+				alert('제목은 필수입니다.');
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 				$('#title').focus();
 				event.preventDefault();
 				return;
@@ -30,7 +38,10 @@
 		})
 		
 	})
+<<<<<<< HEAD
 	
+=======
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 </script>
 </head>
 <body>

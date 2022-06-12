@@ -15,17 +15,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 전체 레코드 갯수 -->
 	<select id="selectBoardCount" resultType="Integer">
+<<<<<<< HEAD
 		SELECT COUNT(BOARD_NO)
 		  FROM BOARD
 	</select>
 	
+=======
+		SELECT COUNT(*)
+		  FROM BOARD
+	</select>
+
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 	<!-- 상세보기 -->
 	<select id="selectBoardByNo" parameterType="Long" resultType="BoardDTO">
 		SELECT BOARD_NO, WRITER, TITLE, CONTENT, HIT, IP, CREATED, MODIFIED
 		  FROM BOARD
 		 WHERE BOARD_NO = #{boardNo}
 	</select>
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 	<!-- 조회수 증가 -->
 	<update id="updateBoardHit" parameterType="Long">
 		UPDATE BOARD
@@ -54,8 +65,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		  FROM BOARD
 		 WHERE BOARD_NO = #{boardNo}
 	</delete>
+<<<<<<< HEAD
 	
 	<!-- 검색 -->
 	
+=======
+
+	<!-- 검색 -->
+
+
+
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 
 </mapper>

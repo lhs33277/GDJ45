@@ -1,5 +1,6 @@
 package com.goodee.ex12.service;
 
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,4 +46,11 @@ public class ReplyServiceImpl implements ReplyService {
 		return map;
 	}
 	
+=======
+import org.springframework.stereotype.Service;
+
+@Service
+public class ReplyServiceImpl implements ReplyService {
+
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 }

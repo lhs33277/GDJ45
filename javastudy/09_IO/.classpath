@@ -6,8 +6,13 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/GDJ45/installer/jar/lombok-1.18.22.jar"/>
 	<classpathentry kind="lib" path="C:/GDJ45/installer/jar/ojdbc6.jar"/>
 	<classpathentry kind="lib" path="C:/GDJ45/installer/jar/json-20211205.jar"/>
+=======
+	<classpathentry kind="lib" path="F:/GDJ45/installer/jar/json-20211205.jar"/>
+	<classpathentry kind="lib" path="F:/GDJ45/installer/jar/lombok-1.18.22.jar"/>
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 	<classpathentry kind="output" path="bin"/>
 </classpath>

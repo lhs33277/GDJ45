@@ -7,10 +7,17 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+<<<<<<< HEAD
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+=======
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 public class ReplyDTO {
 	private Long replyNo;
 	private String writer;
@@ -18,4 +25,8 @@ public class ReplyDTO {
 	private String ip;
 	private Long boardNo;
 	private Date created;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a253384adb4cb43f711c76c7b574dc52fe345675
 }
