@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;ex04_writer&apos; to &apos;ex04_reader&apos;&#x0D;&#x0A;- Original project: &apos;09_IO&apos;&#x0D;&#x0A;- Original element: &apos;09_IO/src/ex04_writer&apos;&#x0D;&#x0A;- Renamed element: &apos;09_IO/src/ex04_reader&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;ex04_writer&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;ex04_writer" name="ex04_reader" qualified="false" references="true" stamp="1647166069618" textual="false" version="1.0"/>
+</session>

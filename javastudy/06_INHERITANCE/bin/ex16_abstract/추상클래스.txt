@@ -1,0 +1,27 @@
+추상 메소드
+
+1. abstract method
+2. 본문이 없는 메소드
+3. 형식   
+	public abstract void method();    // abstract 추가되고 {} 없어짐
+	
+	
+	
+추상 클래스
+
+1. abstract class
+2. 추상 메소드를 하나 이상 가지고 있는 클래스
+3. new를 이용한 인스턴스 생성 불가
+4. 형식
+	public abstract class 클래스 {
+		public abstract void method();    << 추상메소드가 하나 이상 있어야함
+		public void method() { }          << 일반메소드가 있어도 상관없음
+		public void method() { }     
+	}
+	
+
+	
+추상 클래스와 상속
+
+1. 추상 클래스는 슈퍼 클래스(부모)에서 사용
+2. 추상 클래스를 상속 받는 서브 클래스들은 반드시 추상 클래스에 포함된 추상 메소드를 오버라이드(override)해야 한다.
